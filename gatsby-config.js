@@ -13,7 +13,7 @@ require('dotenv').config({
  */
 module.exports = {
   siteMetadata: {
-    title: `Blooming Through Motherhood`,
+    title: `Blooming Motherhood`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@AishaKabir`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,

@@ -15,6 +15,8 @@ const Content = styled.div`
 const Footer = styled.footer`
   margin-top: var(--space-5);
   font-size: var(--font-sm);
+  text-align: center;
+  color: var(--color-text);
 `
 
 const Layout = ({ children }) => {
@@ -34,9 +36,8 @@ const Layout = ({ children }) => {
       <Content>
         <main>{children}</main>
         <Footer>
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <p>© {new Date().getFullYear()} Blooming Motherhood</p>
+          <p>Created by Aisha Kabir</p>
         </Footer>
       </Content>
     </ThemeProvider>

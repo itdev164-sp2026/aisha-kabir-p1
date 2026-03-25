@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
@@ -12,20 +12,27 @@ const Container = styled.div`
     padding: 2rem 0;
 `
 const Title = styled.h1`
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 `
 
 const ImageWrapper = styled.div`
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 `
 
 const Meta = styled.p`
-  font-size: 0.9rem;
-  color: #666;
+    font-size: 0.9rem;
+    color: #666;
 `
 
 const Body = styled.p`
-  line-height: 1.7;
+    line-height: 1.7;
+`
+const BackLink = styled(Link)`
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
 `
 
 
@@ -36,6 +43,7 @@ const MotherhoodPost = ({ data }) => {
     return (
         <Layout>
             <Container>
+                <BackLink to="/">← Back to Home</BackLink>
                 <Title>{title}</Title>
 
                 {heroImage?.gatsbyImageData && (
@@ -69,23 +77,23 @@ export const Head = ({ data }) => (
 )
 
 export const pageQuery = graphql`
-  query motherhoodPostQuery($slug: String!) {
-    contentfulMotherhoodBlogPost(slug: { eq: $slug }) {
-      title
-      slug
-      category
-      author
-      body {
-        body
-      }
-      heroImage {
-        title
-        gatsbyImageData(
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          width: 700
-        )
-      }
+    query motherhoodPostQuery($slug: String!) {
+        contentfulMotherhoodBlogPost(slug: { eq: $slug }) {
+            title
+            slug
+            category
+            author
+            body {
+                body
+            }
+            heroImage {
+                title
+                gatsbyImageData(
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                width: 700
+                )
+            }
+        }
     }
-  }
 `

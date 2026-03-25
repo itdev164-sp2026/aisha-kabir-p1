@@ -8,7 +8,7 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <h1 className={styles.textCenter}>Blooming Through Motherhood</h1>
+    <h1 className={styles.textCenter}>Blooming Motherhood</h1>
     <p className={`${styles.textCenter} ${styles.intro}`}>
       A space for reflections, encouragement, and stories about the beauty,
       challenges, and growth that come with motherhood.
@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
           <Link to={`/${node.slug}`} className={styles.listItemLink}>
             {node.title}
           </Link>
-          
+
 
           {node.heroImage?.gatsbyImageData && (
             <div>
