@@ -59,8 +59,8 @@
     2. Add content model for blog posts
     3. Add your API keys in .env:
 
-        CONTENTFUL_SPACE_ID=your_space_id
-        CONTENTFUL_ACCESS_TOKEN=your_access_token
+        SPACE_ID=your_space_id
+        ACCESS_TOKEN=your_access_token
 
 -- Project Structure --
 
@@ -81,7 +81,7 @@
           index.js
           about.js
           contact.js
-          
+
         templates/
           motherhood-post.js
 
