@@ -64,18 +64,26 @@
 
 -- Project Structure --
 
-  src/
-    components/
-      header.js
-      layout.js
-      seo.js
-      themes/
-    pages/
-      index.js
-      about.js
-      contact.js
-    templates/
-      motherhood-post.js
+      src/
+
+        components/
+
+          header.js
+
+          layout.js
+
+          seo.js
+
+          themes/
+          
+        pages/
+        
+          index.js
+          about.js
+          contact.js
+          
+        templates/
+          motherhood-post.js
 
 -- Author --
 
